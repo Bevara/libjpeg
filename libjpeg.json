@@ -1,0 +1,15 @@
+{
+    "name": "libjpeg",
+    "description": "JPG encoder and decoder",
+    "filters":["rfjpeg","jpegdec","encjpg"],
+    "help": "This filter encodes and decodes to JPEG using libjpeg.",
+    "support": [
+        "image"
+    ],
+    "sources":"https://bevara.ddns.net/sources/libjpeg.accessor",
+    "filter_source":{
+        "rfjpeg" : "reframe_jpeg.c",
+        "jpegdec" : "dec_jpeg.c",
+        "encjpg" : "enc_jpg.c"
+    }
+}
