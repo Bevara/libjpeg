@@ -1,12 +1,12 @@
 
-/* 
+/*
 **
 ** This file is part of Bevara Access Filters.
-** 
+**
 ** This file is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation.
-** 
+**
 ** This file is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-** 
+**
 ** You should have received a copy of the GNU General Public License along with this file. If not, see <https://www.gnu.org/licenses/>.
 */
 
@@ -148,7 +148,7 @@ static GF_Err jpegdec_process(GF_Filter *filter)
 	if (need_conversion)
 	{
 		u32 tmp_in_size = ctx->width * ctx->height * 3;
-		u32 *src = (u32 *)gf_malloc(tmp_in_size);
+		u8 *src = (u8 *)gf_malloc(tmp_in_size);
 		e = gf_img_jpeg_dec(data, size, &ctx->width, &ctx->height, &ctx->pixel_format, src, &tmp_in_size, 3);
 		convert_rgb_to_rgba(output, src, ctx->width * ctx->height);
 		gf_free(src);
