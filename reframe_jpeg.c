@@ -255,3 +255,10 @@ const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_jpegdec_reframe_register(
 {
 	return &ReframeJpegRegister;
 }
+
+
+#include "filter_register.h"
+__attribute__((constructor))
+void register_pegdec_reframe(void) {
+    gf_filter_auto_register("pegdec_reframe", dynCall_jpegdec_reframe_register);
+}

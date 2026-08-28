@@ -481,3 +481,9 @@ const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_jpgenc_register(GF_Filter
 {
 	return &JPGEncRegister;
 }
+
+#include "filter_register.h"
+__attribute__((constructor))
+void register_jpgenc(void) {
+    gf_filter_auto_register("jpgenc", dynCall_jpgenc_register);
+}

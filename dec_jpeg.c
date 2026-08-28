@@ -197,3 +197,9 @@ const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_jpegdec_register(GF_Filte
 {
 	return &JpegDecRegister;
 }
+
+#include "filter_register.h"
+__attribute__((constructor))
+void register_jpegdec(void) {
+    gf_filter_auto_register("jpegdec", dynCall_jpegdec_register);
+}
