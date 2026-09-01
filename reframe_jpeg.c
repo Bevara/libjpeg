@@ -251,7 +251,7 @@ GF_FilterRegister ReframeJpegRegister = {
 	.process = jpeg_process,
 	.process_event = jpeg_process_event};
 
-const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_jpegdec_reframe_register(GF_FilterSession *session)
+const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE jpegdec_reframe_register(GF_FilterSession *session)
 {
 	return &ReframeJpegRegister;
 }
@@ -260,5 +260,5 @@ const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_jpegdec_reframe_register(
 #include "filter_register.h"
 __attribute__((constructor))
 void register_pegdec_reframe(void) {
-    gf_filter_auto_register("pegdec_reframe", dynCall_jpegdec_reframe_register);
+    gf_filter_auto_register("pegdec_reframe", jpegdec_reframe_register);
 }

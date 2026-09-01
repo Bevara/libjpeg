@@ -477,7 +477,7 @@ GF_FilterRegister JPGEncRegister = {
 	.process = jpgenc_process,
 };
 
-const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_jpgenc_register(GF_FilterSession *session)
+const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE jpgenc_register(GF_FilterSession *session)
 {
 	return &JPGEncRegister;
 }
@@ -485,5 +485,5 @@ const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_jpgenc_register(GF_Filter
 #include "filter_register.h"
 __attribute__((constructor))
 void register_jpgenc(void) {
-    gf_filter_auto_register("jpgenc", dynCall_jpgenc_register);
+    gf_filter_auto_register("jpgenc", jpgenc_register);
 }
