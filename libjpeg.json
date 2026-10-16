@@ -13,7 +13,6 @@
         "encjpg" : "enc_jpg.c"
     },
     "Format": ["JPEG"],
-    "licence_required":false,
     "using": ["solver_minimal_1"],
     "runtime": {
         "jpegdec": {
@@ -26,5 +25,10 @@
                 }
             ]
         }
+    },
+    "patents": {
+        "status": "expired",
+        "note": "JPEG baseline",
+        "checked": "2026-10-16"
     }
 }
