@@ -1,5 +1,6 @@
 {
     "name": "libjpeg",
+    "version": "1.0.1",
     "description": "JPG encoder and decoder",
     "filters":["rfjpeg","jpegdec","encjpg"],
     "help": "This filter encodes and decodes to JPEG using libjpeg.",
