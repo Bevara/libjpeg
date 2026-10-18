@@ -1,6 +1,6 @@
 {
     "name": "libjpeg",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "JPG encoder and decoder",
     "filters":["rfjpeg","jpegdec","encjpg"],
     "help": "This filter encodes and decodes to JPEG using libjpeg.",
@@ -14,7 +14,7 @@
         "encjpg" : "enc_jpg.c"
     },
     "Format": ["JPEG"],
-    "using": ["solver_minimal_1"],
+    "using": ["solver_minimal_1", "solver_1"],
     "runtime": {
         "jpegdec": {
             "outputs": [
